@@ -223,7 +223,7 @@ svg path {
 }
 
 .footer {
-  background-color: rgba(243, 174, 226, 0.774);
+  background-color: #F3BCE6;
 }
 
 .footer__columns {
@@ -324,8 +324,8 @@ svg path {
 }
 
 .body-hero__logo {
-  max-width: 12.5rem;
-  max-height: 12.5rem;
+  max-width: 18.75rem;
+  max-height: 18.75rem;
 }
 
 .body-hero__logo img {
