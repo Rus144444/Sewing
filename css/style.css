@@ -149,6 +149,44 @@ svg path {
      object-fit: contain;
 }
 
+.breadcrumbs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  color: #242829;
+}
+
+.breadcrumbs-item {
+  white-space: nowrap;
+}
+
+.breadcrumbs-link {
+  -webkit-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+}
+
+.title {
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+  color: #1a1c1c;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.625rem;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #242829;
+}
+
 .header {
   position: absolute;
   z-index: 50;
@@ -223,7 +261,7 @@ svg path {
 }
 
 .footer {
-  background-color: #F3BCE6;
+  background-color: #808080;
 }
 
 .footer__columns {
@@ -376,41 +414,12 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 3.125rem;
+  gap: 7.5rem;
 }
 
-.contact__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.625rem;
-  color: #242829;
-}
-
-.contact__link {
-  -webkit-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
-}
-
-.contact-content__title {
-  display: inline-block;
-  position: relative;
-  font-weight: 700;
-  margin-bottom: 1.875rem;
-  color: #1a1c1c;
-}
-
-.contact-content__title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.625rem;
-  width: 100%;
-  height: 0.125rem;
-  background-color: #242829;
+.contact-content {
+  padding-top: 2.5rem;
+  padding-top: 2.5rem;
 }
 
 .contact-content__list:not(:last-child) {
@@ -424,6 +433,84 @@ svg path {
 
 .contact-content__item:not(:last-child) {
   margin-bottom: 1.25rem;
+}
+
+.formUs {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.formUs__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7.5rem;
+}
+
+.content-formUs {
+  padding-top: 2.5rem;
+}
+
+.content-formUs__video {
+  width: 35rem;
+  height: 19.625rem;
+}
+
+.content-formUs__video:not(:last-child) {
+  margin-bottom: 3.75rem;
+}
+
+.content-formUs__imag {
+  max-width: 58.125rem;
+  margin-bottom: 2.5rem;
+}
+
+.content-formUs__imag img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content-formUs__label {
+  font-weight: 700;
+}
+
+.content-formUs__label:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+
+.content-formUs__text {
+  max-width: 59.375rem;
+}
+
+.content-formUs__text:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.content-formUs__text p {
+  line-height: 150%;
+}
+
+.content-formUs__text p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.content-formUs__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+  max-width: 18.75rem;
+  max-height: 31.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.content-formUs__media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (min-width: 87.5em) {
@@ -478,6 +565,37 @@ svg path {
   }
 }
 
+@media (max-width: 78.125rem) {
+  .content-formUs__media {
+    display: none;
+  }
+}
+
+@media (max-width: 61.99875em) {
+  .contact__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contact-content {
+    padding-top: 0;
+  }
+
+  .formUs__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3.125rem;
+  }
+
+  .content-formUs {
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 47.99875em) {
   .header {
     min-height: 0.3125rem;
@@ -487,7 +605,7 @@ svg path {
     position: fixed;
     left: -100%;
     top: 0;
-    width: 60%;
+    width: 100%;
     height: 100vh;
     background-color: rgba(128, 128, 128, 0.663);
     padding: 6.875rem 0.9375rem 1.875rem 1.875rem;
@@ -500,7 +618,7 @@ svg path {
     position: fixed;
     left: -100%;
     top: 0;
-    width: 60%;
+    width: 100%;
     height: 5rem;
     background: rgba(128, 128, 128, 0.663);
     -webkit-transition: left 1s ease 0s;
@@ -590,6 +708,16 @@ svg path {
   }
 }
 
+@media (max-width: 37.5rem) and (max-width: 20em) {
+  .content-formUs__video {
+    width: 17.5rem;
+  }
+
+  .content-formUs__video {
+    height: 11.25rem;
+  }
+}
+
 @media (min-width: 20em) and (max-width: 87.5em) {
 @supports (font-size: clamp( 1.875rem , 1.6898148148rem  +  0.9259259259vw , 2.5rem )) {
     .header__logo {
@@ -664,7 +792,48 @@ svg path {
 }
 }
 
+@media (max-width: 37.5rem) and (min-width: 87.5em) {
+  .content-formUs__video {
+    width: 35rem;
+  }
+
+  .content-formUs__video {
+    height: 19.625rem;
+  }
+}
+
+@media (max-width: 37.5rem) and (min-width: 20em) and (max-width: 87.5em) {
+@supports (width: clamp( 17.5rem , 12.3148148148rem  +  25.9259259259vw , 35rem )) {
+    .content-formUs__video {
+      width: clamp( 17.5rem , 12.3148148148rem  +  25.9259259259vw , 35rem );
+    }
+}
+
+@supports not (width: clamp( 17.5rem , 12.3148148148rem  +  25.9259259259vw , 35rem )) {
+    .content-formUs__video {
+      width: calc(17.5rem + 17.5 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (height: clamp( 11.25rem , 8.7685185185rem  +  12.4074074074vw , 19.625rem )) {
+    .content-formUs__video {
+      height: clamp( 11.25rem , 8.7685185185rem  +  12.4074074074vw , 19.625rem );
+    }
+}
+
+@supports not (height: clamp( 11.25rem , 8.7685185185rem  +  12.4074074074vw , 19.625rem )) {
+    .content-formUs__video {
+      height: calc(11.25rem + 8.375 * (100vw - 20rem) / 67.5);
+    }
+}
+}
+
 @media (any-hover: hover) {
+  .breadcrumbs-link:hover {
+    text-decoration: underline;
+    color: gray;
+  }
+
   .header__wrapper:hover {
     background-color: rgba(128, 128, 128, 0.168);
   }
@@ -682,11 +851,6 @@ svg path {
   .columnThree__item:hover {
     color: gray;
     text-decoration: underline;
-  }
-
-  .contact__link:hover {
-    text-decoration: underline;
-    color: gray;
   }
 
   .contact-content__item a:hover {
