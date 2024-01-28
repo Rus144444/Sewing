@@ -537,6 +537,10 @@ svg path {
   .hero {
     padding-top: 7.5rem;
   }
+
+  .contact__wrapper {
+    gap: 7.5rem;
+  }
 }
 
 @media (max-width: 20em) {
@@ -562,6 +566,10 @@ svg path {
 
   .hero {
     padding-top: 3.75rem;
+  }
+
+  .contact__wrapper {
+    gap: 3.125rem;
   }
 }
 
@@ -788,6 +796,18 @@ svg path {
 @supports not (padding-top: clamp( 3.75rem , 2.6388888889rem  +  5.5555555556vw , 7.5rem )) {
     .hero {
       padding-top: calc(3.75rem + 3.75 * (100vw - 20rem) / 67.5);
+    }
+}
+
+@supports (gap: clamp( 3.125rem , 1.8287037037rem  +  6.4814814815vw , 7.5rem )) {
+    .contact__wrapper {
+      gap: clamp( 3.125rem , 1.8287037037rem  +  6.4814814815vw , 7.5rem );
+    }
+}
+
+@supports not (gap: clamp( 3.125rem , 1.8287037037rem  +  6.4814814815vw , 7.5rem )) {
+    .contact__wrapper {
+      gap: calc(3.125rem + 4.375 * (100vw - 20rem) / 67.5);
     }
 }
 }
