@@ -844,12 +844,12 @@ svg path {
   }
 
   .columnOne__item:hover {
-    color: gray;
+    color: #4a4747;
     text-decoration: underline;
   }
 
   .columnThree__item:hover {
-    color: gray;
+    color: #4a4747;
     text-decoration: underline;
   }
 
